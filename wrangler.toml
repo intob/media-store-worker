@@ -1,0 +1,15 @@
+name = "media-store"
+type = "javascript"
+account_id = "[YOUR_CF_ACCOUNT_ID]"
+workers_dev = true
+route = ""
+zone_id = ""
+kv_namespaces = [
+  { binding = "MEDIA", id = "[YOUR_CF_KV_NAMESPACE_ID]", preview_id = "[YOUR_CF_KV_NAMESPACE_ID_FOR_PREVIEW]" }
+]
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "service-worker"
